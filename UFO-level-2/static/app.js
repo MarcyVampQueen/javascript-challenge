@@ -28,6 +28,13 @@ function buildPage(theData) {
         row.append("td").text(sighting.country);
         row.append("td").text(sighting.shape);
         row.append("td").text(sighting.comments);
+
+        // Build the form
+        //TODO make entries unique
+        d3.select("#cityInput").append("option").text(sighting.city);
+        d3.select("#stateInput").append("option").text(sighting.state);
+        d3.select("#countryInput").append("option").text(sighting.country);
+        d3.select("#shapeInput").append("option").text(sighting.shape);
     }
 }
 buildPage(tableData);
