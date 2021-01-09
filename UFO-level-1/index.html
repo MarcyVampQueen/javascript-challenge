@@ -16,14 +16,29 @@
     <span class="navbar-brand mb-0 h1">UFO Sightings!</span>
   </nav>
   <div class="bg-info" style="padding: 3px 10px 10px 10px;">
-    Filter Table Data:
     <form>
       <div class="form-row bg-info">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Date (ex: 1/1/2010)">
+          <label for="dateInput">Date</label>
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="City">
+          <label for="cityInput">City</label>
+        </div>
+        <div class="col">
+          <!-- Empty for Submit Button -->
+        </div>
+      </div>
+      <div class="form-row bg-info">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="1/1/2010" id="dateInput">
+        </div>
+        <div class="col">
+          <select class="form-control" placeholder="City" id="cityInput">
+            <option>1</option>
+          </select>
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </form>

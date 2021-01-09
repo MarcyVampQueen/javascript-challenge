@@ -15,10 +15,17 @@ var tbody = d3.select("tbody");
 for (let sighting of tableData) {
     var row = tbody.append("tr");
     row.append("td").text(sighting.datetime);
-    console.log(sighting.datetime);
     row.append("td").text(sighting.city);
     row.append("td").text(sighting.state);
     row.append("td").text(sighting.country);
     row.append("td").text(sighting.shape);
     row.append("td").text(sighting.comments);
+}
+
+d3.select("button").on("click", filterIt);
+
+function filterIt() {
+    // Prevent the page from refreshing
+    d3.event.preventDefault();
+    console.log("it worked");
 }
